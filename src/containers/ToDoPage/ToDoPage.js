@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TileList } from "../../components/tileList/TileList";
 import { ToDoForm } from "../../components/toDoForm/ToDoForm";
+import DatePicker from 'react-date-picker'; 
 
 export const ToDoPage = ( { todos, addToDo, plants }) => {
   /*
@@ -9,7 +10,7 @@ export const ToDoPage = ( { todos, addToDo, plants }) => {
   */
   const [currentTitle, setCurrentTitle] = useState(''); 
   const [plant, setPlant] = useState(''); 
-  const [date, setDate] = useState(''); 
+  const [date, setDate] = useState(new Date()); 
   const [time, setTime] = useState(''); 
 
 
